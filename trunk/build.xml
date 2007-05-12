@@ -1,0 +1,33 @@
+<project name="Designer" default="build">
+
+	<property name="build" value="./build"/>
+	<property name="src" value="./src"/>
+	<property name="images" value="./images"/>
+
+	<target name="build">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build}/images"/>
+		<copy todir="${build}/images">
+			<fileset dir="./images"/>
+		</copy>
+		<javac destdir="${build}" includes="**/*.java" srcdir="${src}"/>
+	</target>
+
+	<target name="run">
+		<java dir="${build}" classname="Designer" fork="true">
+<!--			<arg line="/c java -cp .;c:\home\java\Designer3\lib\xml-apis.jar;c:\home\java\Designer3\lib\xercesImpl.jar Designer"/>
+-->
+<!--			<arg line="/c java -cp .;..\lib\xml-apis.jar;..\lib\xercesImpl.jar Designer"/> -->
+			<classpath>
+				<pathelement location="build/"/>
+				<pathelement path="..\lib\xml-apis.jar"/>
+				<pathelement path="..\lib\xercesImpl.jar"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}"/>
+	</target>
+
+</project>
