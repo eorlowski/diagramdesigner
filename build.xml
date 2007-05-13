@@ -20,8 +20,10 @@
 <!--			<arg line="/c java -cp .;..\lib\xml-apis.jar;..\lib\xercesImpl.jar Designer"/> -->
 			<classpath>
 				<pathelement location="build/"/>
-				<pathelement path="..\lib\xml-apis.jar"/>
-				<pathelement path="..\lib\xercesImpl.jar"/>
+				<!--pathelement path="..\lib\xml-apis.jar"/>
+				<pathelement path="..\lib\xercesImpl.jar"/-->
+				<pathelement path="${build}/../lib/xml-apis.jar"/>
+				<pathelement path="${build}/../lib/xercesImpl.jar"/>
 			</classpath>
 		</java>
 	</target>
