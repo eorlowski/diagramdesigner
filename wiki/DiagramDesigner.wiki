@@ -1,0 +1,11 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Diagram Designer lets you make simple class diagrams, export them to XML. Import from XML is also supported.
+
+This software is not production ready! Any comments are welcome.
+
+
+
+
