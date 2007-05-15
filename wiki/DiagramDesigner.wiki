@@ -6,6 +6,10 @@ Diagram Designer lets you make simple class diagrams, export them to XML. Import
 
 This software is not production ready! Any comments are welcome.
 
+= Interface to WebDiver =
+Use webdiver2designer.xsl to transform [http://iondriveblog.blogspot.com/2007/01/webdiver-202-released.html WebDiver] file to Designer XML.
+
+
 
 
 
