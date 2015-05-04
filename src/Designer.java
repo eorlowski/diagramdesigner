@@ -16,8 +16,11 @@ import javax.xml.transform.stream.*;
 
 // JPG
 import java.awt.image.*;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-import com.sun.image.codec.jpeg.JPEGCodec;
+/* Uitgesterd vanwege migratie naar Java 7 */
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+/* Added line below for migration to Java 7 */
+import javax.imageio.ImageIO;
 
 public class Designer extends JFrame
 {
@@ -816,10 +819,11 @@ public class Designer extends JFrame
 		
 			drawpane.paintdrawpane(g2d);
 			g2d.dispose();
-					 
-			JPEGImageEncoder imageEncoder;
-			imageEncoder = JPEGCodec.createJPEGEncoder(outputStream);
-			imageEncoder.encode(outImage);
+/*		 Deze onderste drie regels zijn vanwege migratie naar Java 7 uitgesterd. 4 mei 2015 */
+//			JPEGImageEncoder imageEncoder;
+//			imageEncoder = JPEGCodec.createJPEGEncoder(outputStream);
+//			imageEncoder.encode(outImage);
+			ImageIO.write(outImage, "jpeg", outputStream);			
 			outputStream.close();
 		}
 		catch (IOException ioe)
