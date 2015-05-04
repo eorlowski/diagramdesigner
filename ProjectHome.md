@@ -1,0 +1,1 @@
+Design diagrams. Runs with Java Runtime, JDK 1.5.0.
