@@ -13,7 +13,7 @@
 		<javac destdir="${build}" includes="**/*.java" srcdir="${src}"/>
 	</target>
 
-	<target name="run">
+	<target name="run" depends="build">
 		<java dir="${build}" classname="Designer" fork="true">
 <!--			<arg line="/c java -cp .;c:\home\java\Designer3\lib\xml-apis.jar;c:\home\java\Designer3\lib\xercesImpl.jar Designer"/>
 -->
